@@ -3,6 +3,7 @@
 Migrations/
 NDependOut/
 .vs/
+output/
 # User-specific files
 *.suo
 *.user

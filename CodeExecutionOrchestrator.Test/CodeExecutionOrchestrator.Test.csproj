@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="copy /Y &quot;$(OutDir)&quot; &quot;$(SolutionDir)output&quot;" />
+  </Target>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CodeExecutionOrchestrator\CodeExecutionOrchestrator.csproj" />
+  </ItemGroup>
+
+</Project>
